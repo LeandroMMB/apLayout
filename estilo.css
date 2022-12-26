@@ -78,7 +78,7 @@ header{
 
 .footer{
     padding: 20px;
-    background-color: #aaa;
+    background-color: #333;
     text-align: center;
     color: white;
     flex: 100%;
@@ -99,4 +99,24 @@ header{
     nav li{
         display: block;
     }
+}
+
+/*CSS do form*/
+.row:after{
+    content:"";
+    display: flex;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.label{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.input{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }

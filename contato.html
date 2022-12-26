@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <title>Formulário de Contato</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Leandro Bandeira">
+        <meta name="keywords" content="responsividade, css3, html5, Senac Tech">
+        <meta name="description" content="Layout de página responsiva com HTML5 e CSS3">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header>
+            <h1>Formulário de Contato</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Conteúdo</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="esquerda">
+                <h2>Contato:</h2>
+                <p>
+                    <i class="bi bi-telephone-outbound"></i>
+                    <a href="tel:+555112312345">(51) 1231-2345 </a>
+                </p>
+                <p>
+                    <i class="bi bi-whatsapp"></i>
+                    <a href="https://wa.me/5551989898989?text=Estou+entrando+em+contato+pelo+site" target="_blank">(51) 98989-8989</a>
+                </p>
+                <p>
+                    <i class="bi bi-envelope-at"></i>
+                    <a href="mailto:contato@fuladodetal.com.br">contato@fuladodetal.com.br</a>
+                </p>
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    <a href="https://goo.gl/maps/AmqMr3cbigsWm3Rz8" target="_blank">Av. Venâncio Aires, 93 - Cidade Baixa, Porto Alegre - RS, 90040-191</a>
+                </p>
+                <p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1726.8958019800236!2d-51.218893!3d-30.042836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1672075710378!5m2!1spt-BR!2sbr" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </p>
+            </div><!-- fim da div esquerda -->
+            <div class="conteudo">
+                <h2>Formulário</h2>
+                <form name="formUser">
+                    <div class="row">
+                        <div class="label">
+                            <label for="nome">Nome Completo:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="email">E-mail:</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="fone">Telefone:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="fone" id="fone">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="end">Endereço:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="end" id="end">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label>Tipo pessoa:</label>
+                        </div>
+                        <div class="input">
+                            <input type="radio" name="tpPessoa" id="tpCPF" onclick="document.getElementById('divCPF').style.visibility='visible'; document.getElementById('divCNPJ').style.visibility='hidden';">
+                            <label for="tpCPF">CPF</label>
+                            <input type="radio" name="tpPessoa" id="tpCNPJ" onclick="document.getElementById('divCPF').style.visibility='hidden'; document.getElementById('divCNPJ').style.visibility='visible';">
+                            <label for="tpCNPJ">CNPJ</label>
+                        </div>
+                    </div>
+                    <div class="row" id="divCPF" style="visibility: hidden">
+                        <div class="label">
+                            <label for="cpf">CPF:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="cpf" id="cpf" oninput="mascaraCPF(this)">
+                        </div>
+                    </div>
+                    <div class="row" id="divCNPJ" style="visibility: hidden">
+                        <div class="label">
+                            <label for="cpnj">CNPJ:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="cpnj" id="cpnj" oninput="mascaraCNPJ(this)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="senha">Senha:</label>
+                        </div>
+                        <div class="input">
+                            <input type="password" name="senha" id="senha">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="confSenha">Confirme senha:</label>
+                        </div>
+                        <div class="input">
+                            <input type="password" name="confSenha" id="confSenha">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">
+                            <label for="imgUser">Foto perfil:</label>
+                        </div>
+                        <div class="input">
+                            <input type="file" name="imgUser" id="imgUser">
+                        </div>
+                    </div>
+                    <div id="imgPreview">
+                        <img src="" id="preview"/>
+                    </div>
+                    <div class="row">
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Enviar" onclick="return validar()">
+                    </div>
+                </form>
+            </div><!-- fim da div conteudo -->
+            <div class="footer">
+                <h2>Footer - Rodapé</h2>
+                <br/>
+                &COPY; Todos os direitos reservados. Leandro Bandeira
+            </div><!-- fim da div footer -->
+        </div><!-- fim da div container -->
+    </body>
+</html>
+
