@@ -104,8 +104,7 @@ header{
 /*CSS do form*/
 .row:after{
     content:"";
-    display: flex;
-    flex-wrap: wrap;
+    display: table;
     clear: both;
 }
 
@@ -119,4 +118,43 @@ header{
     float: left;
     width: 75%;
     margin-top: 6px;
+}
+
+/*Para todos os inputs*/
+input{
+    color: purple;
+}
+/*Específicos para alguns inputs*/
+input[type=text], input[type=email], input[type=tel], input[type=password]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    background-color: #4caf50;
+    float: right;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    margin: 5px;
+}
+input[type=submit]:hover{
+    background-color: #45a049;
+}
+input[type=reset]{
+    background-color: #af4c4c;
+    float: right;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    margin: 5px;
+}
+input[type=reset]:hover{
+    background-color: #eb6767;
 }
